@@ -1,0 +1,285 @@
+
+<!DOCTYPE HTML>
+<!--
+	Dopetrope 2.0 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+			<title>Three.Fourteen</title>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<meta charset="utf-8" />
+			<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
+				<link rel="stylesheet" href="/theme/css/pygment.css" />
+			<noscript>
+				<link rel="stylesheet" href="/theme/css/skel-noscript.css" />
+				<link rel="stylesheet" href="/theme/css/style.css" />
+				<link rel="stylesheet" href="/theme/css/style-desktop.css" />
+			</noscript>
+<script>var _gaq=[['_setAccount','UA-49475310-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	</head>
+	<body class="no-sidebar" id="Blog">
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<section id="header">
+									
+									<!-- Logo -->
+									<h1><a href=".">Three.Fourteen</a></h1>
+									
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+														<li><a href="/index.html">Home</a></li>
+														<li class="current_page_item"><a href="/blog.html">Blog</a></li>
+														<li><a href="./pages/about.html">About</a></li>
+														<li><a href="./pages/publications.html">Publications</a></li>
+											</ul>
+										</nav>
+
+								</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Main Wrapper -->
+			<div id="main-wrapper" style="padding-top: 3em">
+				<div class="container">
+<div class="row">
+	<div class="12u">
+		<!-- Portfolio -->
+			<section>
+				<div>
+					<div class="row">
+						<div class="12u skel-cell-mainContent">
+							<!-- Content -->
+								<article class="box is-post">
+									<center><h2>WSDM 2014 Summary, Opinions and Other Thoughts</h2></center>
+									<a href="#" class="image image-centered"><img src="images/WSDM2014-text-logo.png" style="border: 1px solid rgba(88,88,88,0.2);max-width: 100%;max-height: 100%;" /></a>
+									Published on February 28, 2014.
+		                            <p>It was a great attending WSDM this year, right at the heart of NYC! I could not possibly cover all that went down there in the three days of the conference, but would use this post to highlight sessions and talks that I attended and found particularly interesting.</p>
+<p>The conference itself was a single track mixture of mostly long, 20 minutes talks and few shorter talks. The sessions revolved around Web Search, Advertising, Recommender Systems, Network Analysis, Language Analysis and Crowdsourcing.</p>
+<p>The <strong>Web Search</strong> Session was very good with several papers that took new and interesting perspectives to the “old" problem of search. In <a href="#ref1">[1]</a> Demeester et al. modeled disagreement between user rankings of top results and used it to improve ranking of search results. Another novel perspective was introduced by Hassan et al. in <a href="#ref2">[2]</a>, which learned to distinguish between long search sessions where the user is satisfied or struggling and unsatisfied. Li et al. looked in <a href="#ref3">[3]</a> at the phenomena of click spam: when spammer try to game search engines by automatically generating clicks on preferable results.</p>
+<p>Personally, I found the <strong>Advertising</strong> sessions somewhat disappointing due to their (usual) focus on complex models that result marginal performance improvements, which rarely teach us something about users, ads or the search process. I get it -  someone has to pay the bills and minor improvements in modeling ads may lead to huge improvements in revenue. Nevertheless, I would much rather see models that actually teach us something about the process than just building a bigger, stronger hammer.</p>
+<p>The <strong>Log Analysis</strong> session was GREAT! I highly recommend looking at all papers, but just to pick a few: the best paper winner <a href="#ref4">[4]</a> by Lagun et al. identified common motifs in mouse movement over search results; <a href="#ref5">[5]</a> by Wang et al. learned jointly the user assignment to clusters and their resulting clicking behavior; <a href="#ref6">[6]</a> by Scaria et al. devised a game where participants have to get from a source wikipedia entry to a target entry by only following links and studied differences between successful and unsuccessful sessions.</p>
+<p>The <strong>NLP</strong>and <strong>Topic Modeling</strong> sessions were pretty much standard LDA papers: we devised this graphical model, inferred it using Gibbs sampling and evaluated it by using perplexity on held-out. Two exception to that, can be found in <a href="#ref7">[7]</a> and <a href="#ref8">[8]</a>. Yu et al. used topics models in <a href="#ref7">[7]</a> to diversify E-commerce search results and evaluated its success in user satisfaction. Bi et al. found topic-specific experts in <a href="#ref8">[8]</a> and verified their results using external dataset.</p>
+<p>From the <strong>Peer Production; Data Analysis</strong> session two papers stood out. First, the work by Abisheva et al. in <a href="#ref9">[9]</a> included a thorough analysis of the cross-section between YouTube and Twitter with interesting takes on the demographics of the platforms and identification of promotional account. Second, the paper by Di et al. in <a href="#ref10">[10]</a> looked at how image features such as the number images or their quality effect purchasing consumer decisions at eBay.</p>
+<p>Have any questions or comments? leave a comment below or contact me @grinbergnir.</p>
+<h3>References:</h3>
+<p><a name="ref1"></a>[1] <a href="http://wwwhome.ewi.utwente.nl/~hiemstra/papers/wsdm2014.pdf">Exploiting user disagreement for search evaluation: an experimental approach</a>, Thomas Demeester, Robin Aly, Djoerd Hiemstra, Dong Nguyen, Dolf Trieschnigg, Chris Develder <br/>
+<a name="ref2"></a>[2] <a href="http://research.microsoft.com/en-us/um/people/ryenw/papers/HassanWSDM2014.pdf">Struggling or Exploring? Disambiguating Search Sessions</a>, Ahmed Hassan, Ryen W. White, Susan T. Dumais, and Yi-Min Wang <br/>
+<a name="ref3"></a>[3] <a href="http://www.thuir.cn/group/~YQLiu/publications/wsdm2014.pdf">Search Engine Click Spam Detection Based on Bipartite Graph Propagation</a>, Xin Li, Min Zhang, Yiqun Liu, Shaoping Ma, Yijiang Jin, Liyun Ru <br/>
+<a name="ref4"></a>[4] <a href="http://www.mathcs.emory.edu/~dlagun/pubs/motifs_wsdm2014.pdf">Discovering Common Motifs in Cursor Movement Data for Improving Web Search Ranking</a>, Dmitry Lagun, Mikhail Ageev, Qi Guo, Eugene Agichtein <br/>
+<a name="ref5"></a>[5] <a href="http://sifaka.cs.uiuc.edu/~wang296/paper/wsdm488.pdf">User Modeling in Search Logs via A Nonparametric Bayesian Approach</a>, Hongning Wang, ChengXiang Zhai, Feng Liang, Anlei Dong, Yi Chang <br/>
+<a name="ref6"></a>[6] <a href="http://cs.stanford.edu/people/jure/pubs/navigation-wsdm14.pdf">The Last Click: Why Users Give up Information Network Navigation</a>, Aju Thalappillil Scaria, Rose Marie Philip, Robert West, Jure Leskovec <br/>
+<a name="ref7"></a>[7] <a href="http://web.engr.oregonstate.edu/~wong/papers/pdf/WSDM2014.pdf">Latent Dirichlet Allocation based Diversified Retrieval for E-commerce Search</a>, Jun Yu, Sunil Mohan, Duangmanee Putthividhya, Weng-Keen Wong <br/>
+<a name="ref8"></a>[8] <a href="http://oak.cs.ucla.edu/~cho/papers/wsdm2014.pdf">Scalable Topic-Specific Influence Analysis on Microblogs</a>, Bin Bi, Yuanyuan Tian, Yannis Sismanis, Andrey Balmin, Junghoo Cho <br/>
+<a name="ref9"></a>[9] <a href="http://ingmarweber.de/wp-content/uploads/2014/02/Who-Watches-and-Shares-What-on-YouTube-And-When-Using-Twitter-to-Understand-YouTube-Viewership.pdf">Who Watches (and Shares) What on YouTube? And When? – Using Twitter to Understand YouTube Viewership</a>, Adiya Abisheva, Venkata R. Kiran Garimella, David Garcia, Ingmar Weber <br/>
+<a name="ref10"></a>[10] <a href="http://labs.ebay.com/events/event/news-vision-paper-accepted-at-wsdm-2014">Is a picture really worth a thousand words? – on the role of images in e-commerce</a>, Wei Di, Neel Sundaresan, Robinson Piramuthu, Anurag Bhardwaj <br/></p>
+										<style type="text/css">	#ssba {
+											padding: 4px;
+											border: 1px solid #e0dddd;
+											background-color: #42a7e2;
+											-moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px;  border-radius: 10px; -o-border-radius: 10px;
+										}
+										#ssba img		
+										{ 	
+											width: 35px !important;
+											padding: 4px;
+											border:  0;
+											box-shadow: none !important;
+											display: inline;
+											vertical-align: middle;
+										}
+										#ssba, #ssba a		
+										{
+											;
+											font-family: Indie Flower;
+											font-size: 	20px;
+											color: 		#ffffff!important;
+											font-weight: bold;
+										}</style>
+										<div id="ssba">  Share!  
+										<a id="ssba_twitter_share" href="http://twitter.com/intent/tweet?text=Love%20this%20post%20by%40grinbergnir%20./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank"><img title="Twitter" class="ssba" src="/theme/images/twitter.png" alt="Twitter"></a>
+										<a id="ssba_facebook_share" href="http://www.facebook.com/sharer.php?u=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank"><img title="Facebook" class="ssba" src="/theme/images/facebook.png" alt="Facebook"></a>
+										<a id="ssba_linkedin_share" class="ssba_share_link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank"><img title="LinkedIn" class="ssba" src="/theme/images/linkedin.png" alt="LinkedIn"></a>
+										<a id="ssba_google_share" href="https://plus.google.com/share?url=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank"><img title="Google+" class="ssba" src="/theme/images/google.png" alt="Google+"></a>
+										<a id="ssba_pinterest_share" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img title="Pinterest" class="ssba" src="/theme/images/pinterest.png" alt="Pinterest"></a>
+										<a id="ssba_reddit_share" href="http://reddit.com/submit?url=./wsdm-2014-summary-opinions-and-other-thoughts.html&amp;title=Love%20this%20post%20by%20%40grinbergnir" target="_blank"><img title="Reddit" class="ssba" src="/theme/images/reddit.png" alt="Reddit"></a><a id="ssba_diggit_share" class="ssba_share_link" href="http://www.digg.com/submit?url=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank"><img title="Digg" class="ssba" src="/theme/images/diggit.png" alt="Digg"></a>
+										<a id="ssba_stumbleupon_share" class="ssba_share_link" href="http://www.stumbleupon.com/submit?url=./wsdm-2014-summary-opinions-and-other-thoughts.html&amp;title=Love%20this%20post%20by%20%40grinbergnir" target="_blank"><img title="StumbleUpon" class="ssba" src="/theme/images/stumbleupon.png" alt="StumbleUpon"></a>
+										<a id="ssba_buffer_share" href="https://bufferapp.com/add?url=./wsdm-2014-summary-opinions-and-other-thoughts.html&amp;text= Love%20this%20post%20by%20%40grinbergnir" target="_blank"><img title="Buffer" class="ssba" src="http://www.simplesharebuttons.com/wp-content/uploads/2013/05/buffer.png" alt="buffer"></a>
+										<a id="ssba_tumblr_share" href="http://www.tumblr.com/share/link?url=./wsdm-2014-summary-opinions-and-other-thoughts.html&amp;name=WSDM%202014%20Summary%2C%20Opinions%20and%20Other%20Thoughts" target="_blank"><img title="tumblr" class="ssba" src="/theme/images/tumblr1.png" alt="tumblr"></a>
+										<a id="ssba_email_share" href="mailto:?subject=Love%20this%20post%20by%40grinbergnir&amp;body=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank"><img title="Email" class="ssba" src="/theme/images/email.png" alt="Email"></a>
+										</div>
+									    <!--<p id="post-share-links">
+									        Share on:
+									        <a href="http://twitter.com/intent/tweet?text=Love%20this%20post%20by%40grinbergnir%20./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank" title="Share on Twitter">Twitter</a>
+									        ❄
+									        <a href="http://www.facebook.com/sharer/sharer.php?u=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank" title="Share via Email">Facebook</a>
+									        ❄
+									        <a href="https://plus.google.com/share?url=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank" title="Share via Email">Google+</a>
+									        ❄
+									        <a href="http://www.linkedin.com/shareArticle?mini=true&url=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank" title="Share via Email">Linkedin</a>
+									        ❄
+									        <a href="mailto:?subject=Love%20this%20post%20by%40grinbergnir&body=./wsdm-2014-summary-opinions-and-other-thoughts.html" target="_blank" title="Share via Email">Email</a>
+									    </p>-->
+		                            <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'threefourteen'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+								</article>
+						</div>
+					</div>
+				</div>
+			</section>
+	</div>
+</div>
+
+				</div>
+			</div>
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+				<!-- Footer -->
+					<section id="footer" class="container">
+						<div class="row">
+							<div class="8u">
+								<section>
+									<header>
+										<h2>Latest posts</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Feb <strong>28</strong></span>
+											<h3><a href="wsdm-2014-summary-opinions-and-other-thoughts.html">WSDM 2014 Summary, Opinions and Other Thoughts</a></h3>
+											<p><p>It was a great attending WSDM this year, right at the heart of NYC! I could not possibly cover all that went down there in the three days of the conference, but would use this post to highlight sessions and talks that I attended and found particularly interesting.</p>
+<p>The conference ...</p></p>
+										</li>
+										<li>
+											<span class="date">May <strong>19</strong></span>
+											<h3><a href="sem-exp-api.html">Our Semantic Keyword Expansion API is ON!</a></h3>
+											<p><p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly ...</p></p>
+										</li>
+										<li>
+											<span class="date">Apr <strong>28</strong></span>
+											<h3><a href="using-tweepy.html">Best Practices for Querying Twitter API using (forked) tweepy</a></h3>
+											<p><p>Over the past few weeks I have been accessing Twitter API from python
+using tweepy. In the course of doing so, I added support in tweepy for
+using multiple authentication handlers, monitoring rate limits, waiting
+when running out of calls, support for search using Twitter API v1.1,
+proper pagination ...</p></p>
+										</li>
+										<li>
+											<span class="date">Mar <strong>30</strong></span>
+											<h3><a href="extracting-diurnal-patterns.html">Extracting Diurnal Patterns of Real World Activity from Social Media</a></h3>
+											<p><p>Our most recent work got accepted to ICWSM 2013! See the
+<a href="/pages/publications.html">publications</a> page for the full paper.</p>
+<p>Here is the abstract:<br />
+In this study, we develop methods to identify verbal expressions in
+social media streams that refer to real-world activities. Using
+aggregate daily patterns of Foursquare checkins, our methods extract ...</p></p>
+										</li>
+									</ul>
+								</section>
+							</div>
+								<div class="4u">
+										<section>
+											<header>
+												<h2>About the author</h2>
+											</header>
+											<a href="./pages/about.html" class="image"><img src="/images/Clymer_N0130_5624-sci.jpg" alt=""/></a>
+											<p>I am a PhD student in the <a href="http://www.cs.cornell.edu/">Computer Science</a> department at Cornell
+University (Cornell Tech Campus). My advisor is <a href="http://tech.cornell.edu/mor-naaman/">Mor Naaman</a> and I am
+a member of the great Connective Media Lab. I was fortunate to spend the
+past summers as a research intern at <a href="http://labs.yahoo.com/">Yahoo Labs</a>, <a href="http://www.socialflow.com">SocialFlow
+Inc.</a> and ...</p>
+						                    <footer>
+						                        <a href="./pages/about.html" class="button">Find out more</a>
+						                    </footer>
+										</section>
+									<section style="border-top: solid 1px #ddd; border-top-color: rgba(255,255,255,0.05); padding: 1.3em 0 0 0;">
+									<header>
+										<h2>Contact</h2>
+									</header>
+									<ul class="social">
+											<li class="facebook"><a href="https://www.facebook.com/nirgr" class="icon48 icon48-1">Facebook</a></li>
+											<li class="twitter"><a href="http://twitter.com/grinbergnir" class="icon48 icon48-2">Twitter</a></li>
+										<li class="linkedin"><a href="http://www.linkedin.com/pub/nir-grinberg/44/23b/15" class="icon48 icon48-4">LinkedIn</a></li>
+											<li class="googleplus"><a href="https://plus.google.com/110010581376861389601" class="icon48 icon48-6">Google+</a></li>
+									</ul>
+											<h3>Email</h3>
+											<a href="mailto:nir -AT- cs.cornell.edu">nir -AT- cs.cornell.edu</a>
+											<h3>Address</h3><p>111 8th Ave. Suite 302, New York, NY 10011</p>
+								</section>
+								<section style="border-top: solid 1px #ddd; border-top-color: rgba(255,255,255,0.05); padding: 1.3em 0 1.3em 0;">
+									<header>
+										<h2>Blogroll</h2>
+									</header>
+									<ul>
+										<li><a href="http://www.cs.cornell.edu/">CS @ Cornell</a></li>
+										<li><a href="http://sm.rutgers.edu/">Social Media Info. Lab @ Rutgers</a></li>
+									</ul>
+								</section>
+								</div>
+						</div>
+						<!--<div class="row">
+							<div class="4u">
+								
+							</div>
+							<div class="4u">
+								<section>
+									<header>
+										<h2>Categories</h2>
+									</header>
+									<ul class="divided">
+											<li><a href="./category/uncategorized.html">Uncategorized</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u">
+							
+								
+							</div>
+						</div>-->
+						<div class="row">
+							<div class="12u">
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; Nir Grinberg 2014	</li>
+											<!--<li>Images: <a href="http://facebook.com/DreametryDoodle">Dreametry Doodle</a> + <a href="http://iconify.it">Iconify.it</a></li>-->
+											<li>Theme adapted from: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</section>
+			</div>
+		<script src="/theme/js/jquery.min.js"></script>
+		<script src="/theme/js/jquery.dropotron.js"></script>
+		<script src="/theme/js/config.js"></script>
+		<script src="/theme/js/skel.min.js"></script>
+		<script src="/theme/js/skel-panels.min.js"></script>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="/theme/css/ie8.css" /><![endif]-->
+	</body>
+</html>
