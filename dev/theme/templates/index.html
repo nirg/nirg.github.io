@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% set my_page_name = 'Home' %}
+{% block body_id %}Home{% endblock %}
+{% block content %}
+<div class="row">
+<div class="12u">
+    <section>
+        <div class="row">
+            <div class="12u">
+
+                <!-- Banner -->
+                    <section id="banner">
+                        <a href="#">
+                            <span class="image image-full"><img src="images/banner1.jpg" alt=""></span>
+                            <header>
+                                <h2>Welcome to Three.Fourteen</h2>
+                                <span class="byline">Website &amp; blog by Nir Grinberg</span>
+                            </header>
+                        </a>
+                    </section>
+
+            </div>
+        </div>
+        <p></p>
+        <div>
+        <header class="major">
+            <h2>Blog Posts</h2>
+        </header>
+        <div class="row">
+            {% for article in articles %}
+            <div class="4u">
+                <section class="box">
+                    <header>
+                        <a href="{{ SITEURL }}/{{ article.url }}" class="image"><img src="{{ article.picture }}" alt=""/></a>
+                        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{article.title }}</a></h3>
+                        <span class="byline">{{ article.locale_date }}</span>
+                    </header>
+                    {{ article.summary }}
+                    <footer class="actions">
+                        <a href="{{ SITEURL }}/{{ article.url }}" class="button button-icon button-icon-1">Continue Reading</a>
+                    </footer>
+                </section>
+            </div>
+            {% endfor %}
+        </div>
+    </section><!-- /#content -->
+</div>
+</div>
+{% endblock content %}

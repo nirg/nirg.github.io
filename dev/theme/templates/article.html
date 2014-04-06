@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block body_id %}Blog{% endblock %}
+{% block content %}
+<div class="row">
+	<div class="12u">
+		<!-- Portfolio -->
+			<section>
+				<div>
+					<div class="row">
+						<div class="12u skel-cell-mainContent">
+							<!-- Content -->
+								<article class="box is-post">
+									<center><h2>{{article.title }}</h2></center>
+									<a href="#" class="image image-centered"><img src="{{ article.picture }}" style="border: 1px solid rgba(88,88,88,0.2);max-width: 100%;max-height: 100%;" /></a>
+									Published on {{ article.locale_date }}.
+		                            {{ article.content }}
+									{% if article.status != 'draft' %}
+										<style type="text/css">	#ssba {
+											padding: 4px;
+											border: 1px solid #e0dddd;
+											background-color: #42a7e2;
+											-moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px;  border-radius: 10px; -o-border-radius: 10px;
+										}
+										#ssba img		
+										{ 	
+											width: 35px !important;
+											padding: 4px;
+											border:  0;
+											box-shadow: none !important;
+											display: inline;
+											vertical-align: middle;
+										}
+										#ssba, #ssba a		
+										{
+											;
+											font-family: Indie Flower;
+											font-size: 	20px;
+											color: 		#ffffff!important;
+											font-weight: bold;
+										}</style>
+										<div id="ssba">  Share!  
+										<a id="ssba_twitter_share" href="http://twitter.com/intent/tweet?text=Love%20this%20post%20by%40grinbergnir%20{{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank"><img title="Twitter" class="ssba" src="/theme/images/twitter.png" alt="Twitter"></a>
+										<a id="ssba_facebook_share" href="http://www.facebook.com/sharer.php?u={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank"><img title="Facebook" class="ssba" src="/theme/images/facebook.png" alt="Facebook"></a>
+										<a id="ssba_linkedin_share" class="ssba_share_link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank"><img title="LinkedIn" class="ssba" src="/theme/images/linkedin.png" alt="LinkedIn"></a>
+										<a id="ssba_google_share" href="https://plus.google.com/share?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank"><img title="Google+" class="ssba" src="/theme/images/google.png" alt="Google+"></a>
+										<a id="ssba_pinterest_share" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img title="Pinterest" class="ssba" src="/theme/images/pinterest.png" alt="Pinterest"></a>
+										<a id="ssba_reddit_share" href="http://reddit.com/submit?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}&amp;title=Love%20this%20post%20by%20%40grinbergnir" target="_blank"><img title="Reddit" class="ssba" src="/theme/images/reddit.png" alt="Reddit"></a><a id="ssba_diggit_share" class="ssba_share_link" href="http://www.digg.com/submit?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank"><img title="Digg" class="ssba" src="/theme/images/diggit.png" alt="Digg"></a>
+										<a id="ssba_stumbleupon_share" class="ssba_share_link" href="http://www.stumbleupon.com/submit?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}&amp;title=Love%20this%20post%20by%20%40grinbergnir" target="_blank"><img title="StumbleUpon" class="ssba" src="/theme/images/stumbleupon.png" alt="StumbleUpon"></a>
+										<a id="ssba_buffer_share" href="https://bufferapp.com/add?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}&amp;text= Love%20this%20post%20by%20%40grinbergnir" target="_blank"><img title="Buffer" class="ssba" src="http://www.simplesharebuttons.com/wp-content/uploads/2013/05/buffer.png" alt="buffer"></a>
+										<a id="ssba_tumblr_share" href="http://www.tumblr.com/share/link?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}&amp;name={{ article.title|urlencode }}" target="_blank"><img title="tumblr" class="ssba" src="/theme/images/tumblr1.png" alt="tumblr"></a>
+										<a id="ssba_email_share" href="mailto:?subject=Love%20this%20post%20by%40grinbergnir&amp;body={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank"><img title="Email" class="ssba" src="/theme/images/email.png" alt="Email"></a>
+										</div>
+									    <!--<p id="post-share-links">
+									        Share on:
+									        <a href="http://twitter.com/intent/tweet?text=Love%20this%20post%20by%40grinbergnir%20{{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank" title="Share on Twitter">Twitter</a>
+									        ❄
+									        <a href="http://www.facebook.com/sharer/sharer.php?u={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank" title="Share via Email">Facebook</a>
+									        ❄
+									        <a href="https://plus.google.com/share?url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank" title="Share via Email">Google+</a>
+									        ❄
+									        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank" title="Share via Email">Linkedin</a>
+									        ❄
+									        <a href="mailto:?subject=Love%20this%20post%20by%40grinbergnir&body={{ SITEURL|urlencode }}/{{ article.url|urlencode }}" target="_blank" title="Share via Email">Email</a>
+									    </p>-->
+									{% endif %}
+		                            <h2>Comments</h2>
+									{% include 'disqus_script.html' %}
+								</article>
+						</div>
+					</div>
+				</div>
+			</section>
+	</div>
+</div>
+{% endblock %}
