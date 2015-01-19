@@ -1,0 +1,3 @@
+cd to the directory where pelicanconf.py reside
+then assuming sudo pip install pelican and sudo pip install markdown were run on the machine execute in command line:
+pelican content

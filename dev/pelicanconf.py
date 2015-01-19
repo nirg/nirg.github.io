@@ -31,7 +31,8 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 # static paths will be copied without parsing their contents
-STATIC_PATHS = ['images', 'papers','files']
+STATIC_PATHS = ['images', 'papers','files', 'files/upenn2014/social-media-diurnal-patterns.html']
+ARTICLE_EXCLUDES = ['files', 'files/upenn2014']
 
 THEME = "theme"
 
@@ -51,7 +52,7 @@ MENUITEMS = [('Home', '/index.html'), ('Blog', '/blog.html')]
 
 TEMPLATE_PAGES = {'../theme/templates/blog.html': 'blog.html'}
 
-PLUGIN_PATH = './plugins'
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['summary']
 
 DISQUS_SITENAME = 'threefourteen'

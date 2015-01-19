@@ -1,7 +1,9 @@
 Title: Publications
-Date: 2013-03-04 03:09
+Date: 2015-01-19 11:39
 Author: grinbergnir
 Slug: publications
+
+-   Invited Talk: **Social Media Diurnal Patterns**, Clunch Seminar, University of Pennsylvania, Decemeber 2014. <a href="/files/upenn2014/social-media-diurnal-patterns.html" target="_blank">[slides]</a>
 
 -   **Extracting Diurnal Patterns of Real World Activity from Social Media** by Nir Grinberg, Mor Naaman, Blake Shaw and Gilad Lotan. *ICWSM'13.* <a href="/papers/grinberg-icwsm2013-extracting.pdf" target="_blank"><img src="/images/pdf-icon-16x16.png"></a>
 
