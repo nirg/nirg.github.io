@@ -4,10 +4,10 @@ Author: grinbergnir
 Slug: about
 Picture: /images/Clymer_N0130_5624-sci.jpg
 
-I am a PhD student in the [Computer Science][] department at Cornell
-University (Cornell Tech Campus). My advisor is [Mor Naaman][] and I am
-a member of the great Connective Media Lab. I was fortunate to spend the
-past summers as a research intern at [Yahoo Labs][], [SocialFlow
+I am a PhD candidate in the [Computer Science][] department at Cornell
+University and part of the Jacobs Institute at [Cornell Tech][]. My advisor is [Mor Naaman][] and I am
+a member of the great [Social Technologies Lab][]. I was fortunate to spend the
+past summers as a research intern at [Facebook Core Data Science][], [Yahoo Labs][], [SocialFlow
 Inc.][] and [Bloomberg L.P.][] Prior to Cornell, I got MS in Computer
 Science from Rutgers University and a double major B.Sc. in Physics and
 Computer Science at Tel-Aviv University.
@@ -20,7 +20,10 @@ list of works where I managed to [push the limit][] a little bit in
 answering these questions.
 
   [Computer Science]: http://www.cs.cornell.edu/
-  [Mor Naaman]: http://tech.cornell.edu/mor-naaman/
+  [Cornell Tech]: http://tech.cornell.edu/
+  [Mor Naaman]: http://tech.cornell.edu/people/mor-naaman
+  [Social Technologies Lab]: https://s.tech.cornell.edu/
+  [Facebook Core Data Science]: https://research.facebook.com/datascience
   [Yahoo Labs]: http://labs.yahoo.com/
   [SocialFlow Inc.]: http://www.socialflow.com
   [Bloomberg L.P.]: http://www.bloomberg.com/

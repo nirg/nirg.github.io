@@ -18,7 +18,8 @@ TRANSLATION_FEED_ATOM = None
 
 # Blogroll
 LINKS =  (('CS @ Cornell', 'http://www.cs.cornell.edu/'),
-          ('Social Media Info. Lab @ Rutgers', 'http://sm.rutgers.edu/'))
+          ('Social Technologies Lab @ Cornell Tech', 'https://s.tech.cornell.edu/'),
+          ('Facebook Core Data Science', 'https://research.facebook.com/datascience'))
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/nirg'),
@@ -36,7 +37,7 @@ ARTICLE_EXCLUDES = ['files', 'files/upenn2014']
 
 THEME = "theme"
 
-ADDRESS = "111 8th Ave. Suite 302, New York, NY 10011"
+ADDRESS = "111 8th Ave. Suite 1202, New York, NY 10011"
 MAIL = "nir -AT- cs.cornell.edu"
 TWITTER_USER = "grinbergnir"
 GOOGLEPLUS_USER = "110010581376861389601"
@@ -45,7 +46,7 @@ FACEBOOK_USER = "nirgr"
 ABOUT_TEXT = "Any text set here will show up on the bottom right of the page."
 ABOUT_IMAGE = "/images/Clymer_N0130_5624-sci.jpg"
 ABOUT_LINK = "/pages/about.html"
-COPYRIGHT = "Nir Grinberg 2014"
+COPYRIGHT = "Nir Grinberg 2015"
 #SHOW_COPYRIGHT : True by default, you can set it to False to hide the copyrights.
 
 MENUITEMS = [('Home', '/index.html'), ('Blog', '/blog.html')]

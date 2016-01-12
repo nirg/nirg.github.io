@@ -1,0 +1,19 @@
+Title: Changes in Engagement Before and After Posting to Facebook
+Date: 2016-01-10 12:39
+Author: grinbergnir
+Category: Uncategorized
+Slug: contribution-effect
+Picture: images/reciprocity-2.png
+
+Our recent work got accepted to CHI 2016! See the
+[publications][] page for the full paper. 
+
+Here is the abstract:  
+The asynchronous nature of communications on social network sites creates a unique opportunity for studying how posting content interacts with individuals' engagement.
+This study focuses on the behavioral changes occurring hours before and after contribution to better understand the changing needs and preferences of contributors.
+Using observational data analysis of individuals' activity on Facebook, we test hypotheses regarding the motivations for site visits, changes in the distribution of attention to content, and shifts in decisions to interact with others.
+We find that after posting content people are intrinsically motivated to visit the site more often, are more attentive to content from friends (but not others), and choose to interact more with friends (in large part due to reciprocity). In addition, contributors are more active on the site hours before posting and remain more active for less than a day afterwards.
+
+Our study identifies a unique pattern of engagement that accompanies contribution and can inform the design of social network sites to better support contributors.
+
+  [publications]: /pages/publications.html
