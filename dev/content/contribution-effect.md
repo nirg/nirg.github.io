@@ -8,12 +8,26 @@ Picture: images/reciprocity-2.png
 Our recent work got accepted to CHI 2016! See the
 [publications][] page for the full paper. 
 
-Here is the abstract:  
-The asynchronous nature of communications on social network sites creates a unique opportunity for studying how posting content interacts with individuals' engagement.
-This study focuses on the behavioral changes occurring hours before and after contribution to better understand the changing needs and preferences of contributors.
-Using observational data analysis of individuals' activity on Facebook, we test hypotheses regarding the motivations for site visits, changes in the distribution of attention to content, and shifts in decisions to interact with others.
-We find that after posting content people are intrinsically motivated to visit the site more often, are more attentive to content from friends (but not others), and choose to interact more with friends (in large part due to reciprocity). In addition, contributors are more active on the site hours before posting and remain more active for less than a day afterwards.
+I think this work is interesting for three main reasons: the questions we addressed, the methodology for answering them, and the answers we arrived at. 
 
-Our study identifies a unique pattern of engagement that accompanies contribution and can inform the design of social network sites to better support contributors.
+The fundamental question we addressed in this work is __how do we engage differently with each other and with social media sites at different times and contexts__. In particular, 
+we looked at several measures of engagement around times when people posted to Facebook. We drew on existing theories from communication and social
+psychology to formulate hypotheses regarding the motivations for visiting Facebook, changes in the distribution of attention to content, and shifts in
+decisions to interact with others.
+
+Our methodology for addressing the above questions is quite unique. We used a within-subject (i.e. comparing each person to herself), observational data analysis of deidentified log data of Facebook activity from a sample of 2.4 million people(!) over a period of 9 days. In our design, we observe the actions individuals chose to take on Facebook, without any intervention, around times of posting and another comparable activity, like liking
+or commenting on another's post.
+
+The use of "Big Data" in this case adds to previous knowledge in a manner that is objective, representative of the phenomena as it happens in "real life", and that is very hard to measure otherwise. Previous work on the subject mostly relied on interviews and self-reported measures. Our use of a large sample of people in conjugation with objective measures of engagement allowed us to find small and medium effects that are unlikely to show up in interviews and surveys. In addition, it's hard to design an experiment that affects people's actions without inadvertently affecting the surrounding engagement around the action. 
+
+Last but not least, our findings are **really interesting**. We saw the following:
+
+* An increase in self-motivated site visits after posting.
+* A small but substantive increase in the consumption and interaction with friends' content, but not others. 
+* A large and immediate effect of what we think is direct reciprocity.  
+
+To know more about these, you'd have to read the paper!
+
+The work is far from being perfect, of course, and as we discussed in the paper has major limitations. However, I believe that the work is a good first step in a direction to help Facebook and other social network providers think of ways to build better systems for people.
 
   [publications]: /pages/publications.html
