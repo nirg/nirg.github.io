@@ -17,9 +17,12 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('CS @ Cornell', 'http://www.cs.cornell.edu/'),
+LINKS =  (('Lazer Lab', 'http://lazerlab.net/'),
+		  ('CS @ Cornell', 'http://www.cs.cornell.edu/'),
           ('Social Technologies Lab @ Cornell Tech', 'https://s.tech.cornell.edu/'),
-          ('Facebook Core Data Science', 'https://research.facebook.com/datascience'))
+          ('Facebook Core Data Science', 'https://research.facebook.com/datascience'),
+          ('Harvard IQSS', 'http://www.iq.harvard.edu/'),
+		  ('Network Science Institute', 'http://www.networkscienceinstitute.org/'))
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/nirg'),
@@ -37,16 +40,16 @@ ARTICLE_EXCLUDES = ['files', 'files/upenn2014']
 
 THEME = "theme"
 
-ADDRESS = "111 8th Ave. Suite 1202, New York, NY 10011"
-MAIL = "nir -AT- cs.cornell.edu"
+ADDRESS = "177 Auntington Ave., 10th floor, Boston, MA 02115"
+MAIL = "last.first name -AT- gmail.com"
 TWITTER_USER = "grinbergnir"
 GOOGLEPLUS_USER = "110010581376861389601"
 LINKEDIN_USER = "nir-grinberg/44/23b/15"
 FACEBOOK_USER = "nirgr"
 ABOUT_TEXT = "Any text set here will show up on the bottom right of the page."
-ABOUT_IMAGE = "/images/Clymer_N0130_5624-sci.jpg"
+ABOUT_IMAGE = "/images/portrait_sq.jpg"
 ABOUT_LINK = "/pages/about.html"
-COPYRIGHT = "Nir Grinberg 2015"
+COPYRIGHT = "Nir Grinberg 2017"
 #SHOW_COPYRIGHT : True by default, you can set it to False to hide the copyrights.
 
 MENUITEMS = [('Home', '/index.html'), ('Blog', '/blog.html')]

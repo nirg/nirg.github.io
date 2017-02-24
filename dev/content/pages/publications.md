@@ -3,7 +3,9 @@ Date: 2015-01-19 11:39
 Author: grinbergnir
 Slug: publications
 
--   **Changes in Engagement Before and After Posting to Facebook** by **Nir Grinberg**, P. Alex Dow, Lada A. Adamic, and Mor Naaman. To Appear in *CHI'16.* <a href="/papers/contribution2016grinberg.pdf" target="_blank"><img src="/images/pdf-icon-16x16.png"></a>
+-   **Understanding Feedback Expectations on Facebook** by **Nir Grinberg**, Shankar Kalyanaraman, Lada A. Adamic, and Mor Naaman. *CSCW'17.* <a href="/papers/feedback_exp.pdf" target="_blank"><img src="/images/pdf-icon-16x16.png"></a>
+
+-   **Changes in Engagement Before and After Posting to Facebook** by **Nir Grinberg**, P. Alex Dow, Lada A. Adamic, and Mor Naaman. *CHI'16.* **Honorable Mention** <img src="/images/cup.png"> <a href="/papers/contribution2016grinberg.pdf" target="_blank"><img src="/images/pdf-icon-16x16.png"></a>
 
 -   **TL;DR? Understanding Reading Depth in Online Media** by **Nir Grinberg**, Xiao Ma, Dan Valente, Josh Schwartz, Jonah Berger, and Mor Naaman. *In Submission.* 
 
