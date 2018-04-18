@@ -71,7 +71,7 @@
 														<li{% if title == self.body_id() %} class="current_page_item"{% endif %}><a href="{{ link }}">{{ title }}</a></li>
 												{% endfor %}
 												{% if DISPLAY_PAGES_ON_MENU %}
-													{% for p in PAGES %}
+													{% for p in pages %}
 														<li{% if p == page %} class="current_page_item"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 													{% endfor %}
 												{% else %}
