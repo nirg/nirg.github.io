@@ -82,9 +82,9 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
     need more than a single authentication handler. You can provide a
     list of authentication handlers to tweepy and manually switch
     between them:  </p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
 
-<span class="c"># create authentication handlers given pre-existing keys  </span>
+<span class="c1"># create authentication handlers given pre-existing keys  </span>
 <span class="n">auths</span> <span class="o">=</span> <span class="p">[]</span>  
 <span class="k">for</span> <span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">,</span> <span class="n">access_key</span><span class="p">,</span> <span class="n">access_secret</span> <span class="ow">in</span> <span class="n">oauth_keys</span><span class="p">:</span>  
     <span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>  
@@ -93,7 +93,7 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">)</span>
 
-<span class="c"># switch to the second authentication handler (zero-based index)  </span>
+<span class="c1"># switch to the second authentication handler (zero-based index)  </span>
 <span class="n">api</span><span class="o">.</span><span class="n">auth_idx</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -108,7 +108,7 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
     the next authentication handler when running out of calls. This
     feature lets you be a good citizen and not supersede your API calls
     quota.  </p>
-<div class="highlight"><pre><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">,</span> <span class="n">monitor_rate_limit</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">,</span> <span class="n">monitor_rate_limit</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 
@@ -122,7 +122,7 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
     calls allowed by the rate limit, but don't want your program to fail
     with an exception or lose track of the current position in your
     results.  </p>
-<div class="highlight"><pre><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">,</span>
             <span class="n">monitor_rate_limit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">wait_on_rate_limit</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
@@ -153,7 +153,7 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
     complete list of error response codes, see the Twitter API
     documentation on <a href="https://dev.twitter.com/docs/error-codes-responses" title="Error Codes &amp; Responses">Error Codes &amp; Responses</a>. Here is an example of
     using the retry feature:  </p>
-<div class="highlight"><pre><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">,</span> <span class="n">retry_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">retry_delay</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auths</span><span class="p">,</span> <span class="n">retry_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">retry_delay</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                  <span class="n">retry_errors</span><span class="o">=</span><span class="nb">set</span><span class="p">([</span><span class="mi">401</span><span class="p">,</span> <span class="mi">404</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">503</span><span class="p">]))</span>
 </pre></div>
 
@@ -162,27 +162,27 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
 <li>
 <p><strong>How to use pagination with search?</strong> here is the example from
     <code>examples/paginated_search.py</code>:  </p>
-<div class="highlight"><pre><span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>  
+<div class="highlight"><pre><span></span><span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>  
 <span class="n">auth</span><span class="o">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="p">)</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">([</span><span class="n">auth</span><span class="p">],</span> 
-        <span class="c"># support for multiple authentication handlers  </span>
-        <span class="c"># retry 3 times with 5 seconds delay when getting these error codes</span>
-        <span class="c"># For more details see </span>
-        <span class="c"># https://dev.twitter.com/docs/error-codes-responses  </span>
+        <span class="c1"># support for multiple authentication handlers  </span>
+        <span class="c1"># retry 3 times with 5 seconds delay when getting these error codes</span>
+        <span class="c1"># For more details see </span>
+        <span class="c1"># https://dev.twitter.com/docs/error-codes-responses  </span>
         <span class="n">retry_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">retry_delay</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">retry_errors</span><span class="o">=</span><span class="nb">set</span><span class="p">([</span><span class="mi">401</span><span class="p">,</span> <span class="mi">404</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">503</span><span class="p">]),</span> 
-        <span class="c"># monitor remaining calls and block until replenished  </span>
+        <span class="c1"># monitor remaining calls and block until replenished  </span>
         <span class="n">monitor_rate_limit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">wait_on_rate_limit</span><span class="o">=</span><span class="bp">True</span> 
 <span class="p">)</span>
 
-<span class="n">query</span> <span class="o">=</span> <span class="s">&#39;cupcake OR donut&#39;</span>  
+<span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;cupcake OR donut&#39;</span>  
 <span class="n">page_count</span> <span class="o">=</span> <span class="mi">0</span>  
 <span class="k">for</span> <span class="n">tweets</span> <span class="ow">in</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">search</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-                <span class="n">result_type</span><span class="o">=</span><span class="s">&quot;recent&quot;</span><span class="p">,</span> <span class="n">include_entities</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">pages</span><span class="p">():</span>  
+                <span class="n">result_type</span><span class="o">=</span><span class="s2">&quot;recent&quot;</span><span class="p">,</span> <span class="n">include_entities</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">pages</span><span class="p">():</span>  
 <span class="n">page_count</span> <span class="o">+=</span> <span class="mi">1</span>  
-<span class="c"># print just the first tweet out of every page of 100 tweets  </span>
-<span class="k">print</span> <span class="n">tweets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>  
-<span class="c"># stop after retrieving 200 pages  </span>
+<span class="c1"># print just the first tweet out of every page of 100 tweets  </span>
+<span class="k">print</span> <span class="n">tweets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>  
+<span class="c1"># stop after retrieving 200 pages  </span>
 <span class="k">if</span> <span class="n">page_count</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">:</span>  
     <span class="k">break</span>
 </pre></div>
@@ -195,20 +195,20 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
     the results simply as a dictionary. The example at
     <code>examples/json_results.py</code> demonstrate querying a user timeline, tim
     oreilly in this case, using a json payload type:  </p>
-<div class="highlight"><pre><span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>  
+<div class="highlight"><pre><span></span><span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>  
 <span class="n">auth</span><span class="o">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="p">)</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">([</span><span class="n">auth</span><span class="p">])</span>  
 <span class="n">json_user_timeline</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">binder</span><span class="o">.</span><span class="n">bind_api</span><span class="p">(</span>  
-    <span class="n">path</span> <span class="o">=</span> <span class="s">&#39;/statuses/user_timeline.json&#39;</span><span class="p">,</span>  
-    <span class="n">payload_type</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">,</span> <span class="n">payload_list</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>  
-    <span class="n">allowed_param</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">,</span> <span class="s">&#39;user_id&#39;</span><span class="p">,</span> <span class="s">&#39;screen_name&#39;</span><span class="p">,</span> <span class="s">&#39;since_id&#39;</span><span class="p">,</span>
-                     <span class="s">&#39;max_id&#39;</span><span class="p">,</span> <span class="s">&#39;count&#39;</span><span class="p">,</span> <span class="s">&#39;page&#39;</span><span class="p">,</span> <span class="s">&#39;include_rts&#39;</span><span class="p">])</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/statuses/user_timeline.json&#39;</span><span class="p">,</span>  
+    <span class="n">payload_type</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span> <span class="n">payload_list</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>  
+    <span class="n">allowed_param</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;screen_name&#39;</span><span class="p">,</span> <span class="s1">&#39;since_id&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;max_id&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="s1">&#39;include_rts&#39;</span><span class="p">])</span>
 
-<span class="c"># iterate over 50 of tim oreilly&#39;s tweets  </span>
+<span class="c1"># iterate over 50 of tim oreilly&#39;s tweets  </span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">json_user_timeline</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span>
-<span class="n">screen_name</span><span class="o">=</span><span class="s">&#39;timoreilly&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">include_rts</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>  
-<span class="k">print</span> <span class="n">tweet</span><span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">screen_name</span><span class="o">=</span><span class="s1">&#39;timoreilly&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">include_rts</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>  
+<span class="k">print</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 </pre></div>
 
 
@@ -299,9 +299,14 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
 									</header>
 									<ul class="dates">
 										<li>
+											<span class="date">Apr <strong>18</strong></span>
+											<h3><a href="eng-modes-news.html">Modes of Enagement with News and their Relationship to Information Gain in Text</a></h3>
+											<p><p>How do people engage with news articles post-click? How does the development of ideas within the text of articles affect post-click engagement? To address these questions I analyzed a large, client-side log data of over 7.7 million page views of 66,821 news articles from seven popular news publishers …</p></p>
+										</li>
+										<li>
 											<span class="date">Feb <strong>24</strong></span>
 											<h3><a href="feedback-exp.html">When Do People Expect More Likes and Comments on Facebook and From Whom?</a></h3>
-											<p><p>Despite the fact that social media has been around for over a decade now, we still know reletively little about people's expectations for getting attention and responses from their online friends. In <a href="/papers/feedback_exp.pdf">this work</a> we examine the often overlooked end of the attention ``transaction'': the content producer's expectation ...</p></p>
+											<p><p>Despite the fact that social media has been around for over a decade now, we still know reletively little about people's expectations for getting attention and responses from their online friends. In <a href="/papers/feedback_exp.pdf">this work</a> we examine the often overlooked end of the attention ``transaction'': the content producer's expectation to be …</p></p>
 										</li>
 										<li>
 											<span class="date">Jan <strong>10</strong></span>
@@ -309,18 +314,18 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
 											<p><p>Our recent work got accepted to CHI 2016! See the
 <a href="/pages/publications.html">publications</a> page for the full paper. </p>
 <p>I think this work is interesting for three main reasons: the questions we addressed, the methodology for answering them, and the answers we arrived at. </p>
-<p>The fundamental question we addressed in this work is ...</p></p>
+<p>The fundamental question we addressed in this work is …</p></p>
 										</li>
 										<li>
 											<span class="date">Feb <strong>28</strong></span>
 											<h3><a href="wsdm-2014-summary-opinions-and-other-thoughts.html">WSDM 2014 Summary, Opinions and Other Thoughts</a></h3>
 											<p><p>It was a great attending WSDM this year, right at the heart of NYC! I could not possibly cover all that went down there in the three days of the conference, but would use this post to highlight sessions and talks that I attended and found particularly interesting.</p>
-<p>The conference ...</p></p>
+<p>The conference …</p></p>
 										</li>
 										<li>
 											<span class="date">May <strong>19</strong></span>
 											<h3><a href="sem-exp-api.html">Our Semantic Keyword Expansion API is ON!</a></h3>
-											<p><p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly ...</p></p>
+											<p><p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly …</p></p>
 										</li>
 										<li>
 											<span class="date">Apr <strong>28</strong></span>
@@ -329,32 +334,22 @@ Fork me on <a href="http://github.com/nirg/tweepy">GitHub</a> or follow my pull 
 using tweepy. In the course of doing so, I added support in tweepy for
 using multiple authentication handlers, monitoring rate limits, waiting
 when running out of calls, support for search using Twitter API v1.1,
-proper pagination ...</p></p>
+proper pagination …</p></p>
 										</li>
 										<li>
 											<span class="date">Mar <strong>30</strong></span>
 											<h3><a href="extracting-diurnal-patterns.html">Extracting Diurnal Patterns of Real World Activity from Social Media</a></h3>
 											<p><p>Our most recent work got accepted to ICWSM 2013! See the
 <a href="/pages/publications.html">publications</a> page for the full paper.</p>
-<p>Here is the abstract:<br />
+<p>Here is the abstract:<br>
 In this study, we develop methods to identify verbal expressions in
 social media streams that refer to real-world activities. Using
-aggregate daily patterns of Foursquare checkins, our methods extract ...</p></p>
+aggregate daily patterns of Foursquare checkins, our methods extract …</p></p>
 										</li>
 									</ul>
 								</section>
 							</div>
 								<div class="4u">
-										<section>
-											<header>
-												<h2>About the author</h2>
-											</header>
-											<a href="./pages/about.html" class="image"><img src="/images/portrait_sq.jpg" alt=""/></a>
-											<p>I am a postdoc at Harvard's <a href="http://www.iq.harvard.edu/">IQSS</a> and Northeastern's <a href="http://www.networkscienceinstitute.org/">Network Science Institute</a>, and a member of the <a href="http://lazerlab.net/">Lazer Lab</a>. I got my PhD in the <a href="http://www.cs.cornell.edu/">Computer Science</a> from Cornell, where I was advised by <a href="http://tech.cornell.edu/people/mor-naaman">Mor Naaman</a> as part of the Jacobs Institute at <a href="http://tech.cornell.edu/">Cornell Tech</a>. I was fortunate ...</p>
-						                    <footer>
-						                        <a href="./pages/about.html" class="button">Find out more</a>
-						                    </footer>
-										</section>
 									<section style="border-top: solid 1px #ddd; border-top-color: rgba(255,255,255,0.05); padding: 1.3em 0 0 0;">
 									<header>
 										<h2>Contact</h2>

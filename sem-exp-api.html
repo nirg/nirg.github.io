@@ -88,27 +88,27 @@
 <p>Both methods return a list of terms and their corresponding scores as a json object.</p>
 <h2>Using the API from Python</h2>
 <p>As a Python enthusiast, it was natural for me to write a service client in python. The <em>semexpweb.py</em> module has <em>Client</em> class, which provide a convenient, pythonic way for querying the API. To instantiate a Client object do the following:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">semexpweb</span>  
-<span class="n">c</span> <span class="o">=</span> <span class="n">semexpweb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="s">&#39;Contact me for server info&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">semexpweb</span>  
+<span class="n">c</span> <span class="o">=</span> <span class="n">semexpweb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="s1">&#39;Contact me for server info&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>You can also specify a timeout for the HTTP request (defaults to 60). The IP above points to our server and should rarely change.</p>
 <p>Once you have the client object you can give it a list of keywords for expansion, in this example a list of coffee related terms:</p>
-<div class="highlight"><pre><span class="n">coffee_terms</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;coffee&#39;</span><span class="p">,</span> <span class="s">&#39;#coffee&#39;</span><span class="p">,</span> <span class="s">&#39;starbucks&#39;</span><span class="p">,</span> <span class="s">&#39;#starbucks&#39;</span><span class="p">,</span> \\  
-                <span class="s">&#39;espresso&#39;</span><span class="p">,</span> <span class="s">&#39;\#espresso&#39;</span><span class="p">,</span> <span class="s">&#39;lovecoffee&#39;</span><span class="p">,</span> <span class="s">&#39;#lovecoffee&#39;</span><span class="p">,</span> \\  
-                <span class="s">&#39;caffeineaddict&#39;</span><span class="p">,</span> <span class="s">&#39;\#caffeineaddict&#39;</span><span class="p">,</span> <span class="s">&#39;venti&#39;</span><span class="p">,</span> <span class="s">&#39;#venti&#39;</span><span class="p">,</span> \\  
-                <span class="s">&#39;starbucks&#39;</span><span class="p">,</span> <span class="s">&#39;#starbucks&#39;</span><span class="p">,</span> <span class="s">&#39;mugs&#39;</span><span class="p">,</span> <span class="s">&#39;#mugs&#39;</span><span class="p">,</span> <span class="s">&#39;latte&#39;</span><span class="p">,</span> \\  
-                <span class="s">&#39;#latte&#39;</span><span class="p">,</span> <span class="s">&#39;caf&#39;</span><span class="p">,</span> <span class="s">&#39;#caf&#39;</span><span class="p">,</span> <span class="s">&#39;coffeebean&#39;</span><span class="p">,</span> <span class="s">&#39;#coffeebean&#39;</span><span class="p">]</span>  
+<div class="highlight"><pre><span></span><span class="n">coffee_terms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;coffee&#39;</span><span class="p">,</span> <span class="s1">&#39;#coffee&#39;</span><span class="p">,</span> <span class="s1">&#39;starbucks&#39;</span><span class="p">,</span> <span class="s1">&#39;#starbucks&#39;</span><span class="p">,</span> \\  
+                <span class="s1">&#39;espresso&#39;</span><span class="p">,</span> <span class="s1">&#39;\#espresso&#39;</span><span class="p">,</span> <span class="s1">&#39;lovecoffee&#39;</span><span class="p">,</span> <span class="s1">&#39;#lovecoffee&#39;</span><span class="p">,</span> \\  
+                <span class="s1">&#39;caffeineaddict&#39;</span><span class="p">,</span> <span class="s1">&#39;\#caffeineaddict&#39;</span><span class="p">,</span> <span class="s1">&#39;venti&#39;</span><span class="p">,</span> <span class="s1">&#39;#venti&#39;</span><span class="p">,</span> \\  
+                <span class="s1">&#39;starbucks&#39;</span><span class="p">,</span> <span class="s1">&#39;#starbucks&#39;</span><span class="p">,</span> <span class="s1">&#39;mugs&#39;</span><span class="p">,</span> <span class="s1">&#39;#mugs&#39;</span><span class="p">,</span> <span class="s1">&#39;latte&#39;</span><span class="p">,</span> \\  
+                <span class="s1">&#39;#latte&#39;</span><span class="p">,</span> <span class="s1">&#39;caf&#39;</span><span class="p">,</span> <span class="s1">&#39;#caf&#39;</span><span class="p">,</span> <span class="s1">&#39;coffeebean&#39;</span><span class="p">,</span> <span class="s1">&#39;#coffeebean&#39;</span><span class="p">]</span>  
 <span class="k">print</span> <span class="n">c</span><span class="o">.</span><span class="n">context_pmi</span><span class="p">(</span><span class="n">coffee_terms</span><span class="p">)</span>
 </pre></div>
 
 
 <p>The output should look like this:  </p>
-<div class="highlight"><pre><span class="p">[[</span><span class="s">u&#39;#mocha&#39;</span><span class="p">,</span> <span class="mi">2656</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;#barista&#39;</span><span class="p">,</span> <span class="mi">2570</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;#cappuccino&#39;</span><span class="p">,</span> <span class="mi">2565</span><span class="p">],</span> 
- <span class="p">[</span><span class="s">u&#39;#starbuck&#39;</span><span class="p">,</span> <span class="mi">2231</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;#caramel&#39;</span><span class="p">,</span> <span class="mi">2183</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;#frappuccino&#39;</span><span class="p">,</span> <span class="mi">2103</span><span class="p">],</span> 
- <span class="p">[</span><span class="s">u&#39;#iced&#39;</span><span class="p">,</span> <span class="mi">1892</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;#latteart&#39;</span><span class="p">,</span> <span class="mi">1860</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;macchiatos&#39;</span><span class="p">,</span> <span class="mi">1776</span><span class="p">],</span> 
- <span class="p">[</span><span class="s">u&#39;macchiato&#39;</span><span class="p">,</span> <span class="mi">1769</span><span class="p">],</span> <span class="p">[</span><span class="s">u&#39;frappucino&#39;</span><span class="p">,</span> <span class="mi">1738</span><span class="p">],</span> <span class="o">...</span> <span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="p">[[</span><span class="sa">u</span><span class="s1">&#39;#mocha&#39;</span><span class="p">,</span> <span class="mi">2656</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#barista&#39;</span><span class="p">,</span> <span class="mi">2570</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#cappuccino&#39;</span><span class="p">,</span> <span class="mi">2565</span><span class="p">],</span> 
+ <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#starbuck&#39;</span><span class="p">,</span> <span class="mi">2231</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#caramel&#39;</span><span class="p">,</span> <span class="mi">2183</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#frappuccino&#39;</span><span class="p">,</span> <span class="mi">2103</span><span class="p">],</span> 
+ <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#iced&#39;</span><span class="p">,</span> <span class="mi">1892</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;#latteart&#39;</span><span class="p">,</span> <span class="mi">1860</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;macchiatos&#39;</span><span class="p">,</span> <span class="mi">1776</span><span class="p">],</span> 
+ <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;macchiato&#39;</span><span class="p">,</span> <span class="mi">1769</span><span class="p">],</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;frappucino&#39;</span><span class="p">,</span> <span class="mi">1738</span><span class="p">],</span> <span class="o">...</span> <span class="p">]</span>
 </pre></div>
 
 
@@ -199,9 +199,14 @@
 									</header>
 									<ul class="dates">
 										<li>
+											<span class="date">Apr <strong>18</strong></span>
+											<h3><a href="eng-modes-news.html">Modes of Enagement with News and their Relationship to Information Gain in Text</a></h3>
+											<p><p>How do people engage with news articles post-click? How does the development of ideas within the text of articles affect post-click engagement? To address these questions I analyzed a large, client-side log data of over 7.7 million page views of 66,821 news articles from seven popular news publishers …</p></p>
+										</li>
+										<li>
 											<span class="date">Feb <strong>24</strong></span>
 											<h3><a href="feedback-exp.html">When Do People Expect More Likes and Comments on Facebook and From Whom?</a></h3>
-											<p><p>Despite the fact that social media has been around for over a decade now, we still know reletively little about people's expectations for getting attention and responses from their online friends. In <a href="/papers/feedback_exp.pdf">this work</a> we examine the often overlooked end of the attention ``transaction'': the content producer's expectation ...</p></p>
+											<p><p>Despite the fact that social media has been around for over a decade now, we still know reletively little about people's expectations for getting attention and responses from their online friends. In <a href="/papers/feedback_exp.pdf">this work</a> we examine the often overlooked end of the attention ``transaction'': the content producer's expectation to be …</p></p>
 										</li>
 										<li>
 											<span class="date">Jan <strong>10</strong></span>
@@ -209,18 +214,18 @@
 											<p><p>Our recent work got accepted to CHI 2016! See the
 <a href="/pages/publications.html">publications</a> page for the full paper. </p>
 <p>I think this work is interesting for three main reasons: the questions we addressed, the methodology for answering them, and the answers we arrived at. </p>
-<p>The fundamental question we addressed in this work is ...</p></p>
+<p>The fundamental question we addressed in this work is …</p></p>
 										</li>
 										<li>
 											<span class="date">Feb <strong>28</strong></span>
 											<h3><a href="wsdm-2014-summary-opinions-and-other-thoughts.html">WSDM 2014 Summary, Opinions and Other Thoughts</a></h3>
 											<p><p>It was a great attending WSDM this year, right at the heart of NYC! I could not possibly cover all that went down there in the three days of the conference, but would use this post to highlight sessions and talks that I attended and found particularly interesting.</p>
-<p>The conference ...</p></p>
+<p>The conference …</p></p>
 										</li>
 										<li>
 											<span class="date">May <strong>19</strong></span>
 											<h3><a href="sem-exp-api.html">Our Semantic Keyword Expansion API is ON!</a></h3>
-											<p><p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly ...</p></p>
+											<p><p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly …</p></p>
 										</li>
 										<li>
 											<span class="date">Apr <strong>28</strong></span>
@@ -229,32 +234,22 @@
 using tweepy. In the course of doing so, I added support in tweepy for
 using multiple authentication handlers, monitoring rate limits, waiting
 when running out of calls, support for search using Twitter API v1.1,
-proper pagination ...</p></p>
+proper pagination …</p></p>
 										</li>
 										<li>
 											<span class="date">Mar <strong>30</strong></span>
 											<h3><a href="extracting-diurnal-patterns.html">Extracting Diurnal Patterns of Real World Activity from Social Media</a></h3>
 											<p><p>Our most recent work got accepted to ICWSM 2013! See the
 <a href="/pages/publications.html">publications</a> page for the full paper.</p>
-<p>Here is the abstract:<br />
+<p>Here is the abstract:<br>
 In this study, we develop methods to identify verbal expressions in
 social media streams that refer to real-world activities. Using
-aggregate daily patterns of Foursquare checkins, our methods extract ...</p></p>
+aggregate daily patterns of Foursquare checkins, our methods extract …</p></p>
 										</li>
 									</ul>
 								</section>
 							</div>
 								<div class="4u">
-										<section>
-											<header>
-												<h2>About the author</h2>
-											</header>
-											<a href="./pages/about.html" class="image"><img src="/images/portrait_sq.jpg" alt=""/></a>
-											<p>I am a postdoc at Harvard's <a href="http://www.iq.harvard.edu/">IQSS</a> and Northeastern's <a href="http://www.networkscienceinstitute.org/">Network Science Institute</a>, and a member of the <a href="http://lazerlab.net/">Lazer Lab</a>. I got my PhD in the <a href="http://www.cs.cornell.edu/">Computer Science</a> from Cornell, where I was advised by <a href="http://tech.cornell.edu/people/mor-naaman">Mor Naaman</a> as part of the Jacobs Institute at <a href="http://tech.cornell.edu/">Cornell Tech</a>. I was fortunate ...</p>
-						                    <footer>
-						                        <a href="./pages/about.html" class="button">Find out more</a>
-						                    </footer>
-										</section>
 									<section style="border-top: solid 1px #ddd; border-top-color: rgba(255,255,255,0.05); padding: 1.3em 0 0 0;">
 									<header>
 										<h2>Contact</h2>
