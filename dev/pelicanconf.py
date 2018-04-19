@@ -49,7 +49,7 @@ FACEBOOK_USER = "nirgr"
 ABOUT_TEXT = "Any text set here will show up on the bottom right of the page."
 ABOUT_IMAGE = "/images/portrait_sq.jpg"
 ABOUT_LINK = "/pages/about.html"
-COPYRIGHT = "Nir Grinberg 2017"
+COPYRIGHT = "Nir Grinberg 2018"
 #SHOW_COPYRIGHT : True by default, you can set it to False to hide the copyrights.
 
 MENUITEMS = [('Home', '/index.html'), ('Blog', '/blog.html')]
@@ -61,3 +61,4 @@ PLUGINS = ['summary']
 
 DISQUS_SITENAME = 'threefourteen'
 GOOGLE_ANALYTICS = 'UA-49475310-1'
+TWITTER_CARDS = True

@@ -5,6 +5,9 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+{% if USE_OPEN_GRAPH is not defined %}
+    {% set USE_OPEN_GRAPH = True %}
+{% endif %}
 {% macro iconify(url, text='') -%}
 	{% if text != '' %}<a href="{{ url }}">{{ text }}</a>&nbsp;{% endif %}
 	<a href="{{ url }}"><img src="/theme/images/twitter.png"></a>
@@ -15,6 +18,27 @@
 			<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 			<meta charset="utf-8" />
+             {# Open Graph tags #}
+            {% if USE_OPEN_GRAPH %}
+            {% block opengraph %}
+            <!-- Open Graph tags -->
+                {% if OPEN_GRAPH_FB_APP_ID %}
+                    <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+                {% endif %}
+                <meta property="og:site_name" content="{{ SITENAME }}" />
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="{{ SITENAME }}"/>
+                <meta property="og:url" content="{{ SITEURL }}"/>
+                <meta property="og:description" content="{{ SITENAME }}"/>
+                {% if OPEN_GRAPH_IMAGE %}
+                    <meta property="og:image"
+                          content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
+                {% endif %}
+            {% endblock %}
+            {% endif %}
+
+            {# Twitter Cards tags #}
+            {% include 'twitter_cards.html' %}
 			{% if FEED_ALL_ATOM %}
 			<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
 			{% endif %}
