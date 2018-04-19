@@ -5,6 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = u'Nir Grinberg'
 SITENAME = u'Three.Fourteen'
 SITEURL = 'http://www.nirg.net'
+SITEURL_ABS = SITEURL
+RELATIVE_URLS = False
 
 TIMEZONE = 'EST'
 
@@ -62,3 +64,4 @@ PLUGINS = ['summary']
 DISQUS_SITENAME = 'threefourteen'
 GOOGLE_ANALYTICS = 'UA-49475310-1'
 TWITTER_CARDS = True
+OPEN_GRAPH_IMAGE = "images/portrait_sq.jpg"
