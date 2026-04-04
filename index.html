@@ -1,346 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nir Grinberg</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="description" content="Nir Grinberg, Assistant Professor at Ben-Gurion University of the Negev, studying social behavior in online systems using Machine Learning (ML), Natural Language Processing (NLP), and Computational Social Science (CSS).">
+  <link rel="canonical" href="https://www.nirg.net/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nirg.net/">
+  <meta property="og:title" content="Nir Grinberg">
+  <meta property="og:description" content="Nir Grinberg, Assistant Professor at Ben-Gurion University of the Negev, studying social behavior in online systems using Machine Learning (ML), Natural Language Processing (NLP), and Computational Social Science (CSS).">
+  <meta property="og:image" content="https://nirg.net/og-image.png"> 
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nir Grinberg">
+  <meta name="twitter:description" content="Researching the intersection of social behavior and large-scale information systems.">
+  <meta name="twitter:image" content="https://nirg.net/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; }
+    .nav-link.active {
+      color: #4f46e5;
+      background-color: #eef2ff;
+    }
+    .dark .nav-link.active {
+      color: #818cf8;
+      background-color: rgba(99, 102, 241, 0.15);
+    }
+  </style>
+  <script>
+    /* Prevent flash of wrong theme on load */
+    (function () {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nir Grinberg",
+  "jobTitle": "Assistant Professor",
+  "affiliation": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Ben-Gurion University of the Negev",
+      "sameAs": "https://www.bgu.ac.il"
+    },
+    {
+      "@type": "ResearchOrganization",
+      "name": "Socially Embedded Lab",
+      "url": "https://sel.sise.bgu.ac.il/",
+      "roleName": "Director"
+    }
+  ], 
+  "url": "https://www.nirg.net",
+  "sameAs": [
+    "https://scholar.google.com/citations?user=7PPJ0CMAAAAJ",
+    "https://github.com/nirg",
+    "https://bsky.app/profile/nirg.bsky.social",
+    "https://x.com/grinbergnir"
+  ],
+  "description": "Assistant Professor at Ben-Gurion University of the Negev, studying social behavior in online systems using Machine Learning (ML), Natural Language Processing (NLP), and Computational Social Science (CSS)."
+}
+  </script>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased transition-colors duration-200">
 
-<!DOCTYPE HTML>
-<!--
-	Dopetrope 2.0 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-			<title>Three.Fourteen</title>
-			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-			<meta charset="utf-8" />
-            <!-- Open Graph tags -->
-                <meta property="og:site_name" content="Three.Fourteen" />
-                <meta property="og:type" content="website"/>
-                <meta property="og:title" content="Three.Fourteen"/>
-                <meta property="og:url" content="http://www.nirg.net"/>
-                <meta property="og:description" content="Three.Fourteen"/>
-                    <meta property="og:image"
-                          content="http://www.nirg.net/images/portrait_sq.jpg"/>
+  <!-- ─── Site header (scrolls with page) ─── -->
+  <header class="max-w-2xl mx-auto px-6 pt-14 pb-10">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
 
-    <meta name="twitter:dnt" content="on">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:domain" content=".">
-			<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
-				<link rel="stylesheet" href="/theme/css/pygment.css" />
-			<noscript>
-				<link rel="stylesheet" href="/theme/css/skel-noscript.css" />
-				<link rel="stylesheet" href="/theme/css/style.css" />
-				<link rel="stylesheet" href="/theme/css/style-desktop.css" />
-			</noscript>
-<!-- <script>var _gaq=[['_setAccount','UA-49475310-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script> -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49475310-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <img
+        src="photo.jpg"
+        alt="Nir Grinberg"
+        class="w-40 h-40 object-cover flex-shrink-0 shadow-xl rounded-xl"
+      >
 
-  gtag('config', 'UA-49475310-1');
-</script>
-		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-	</head>
-	<body class="no-sidebar" id="Home">
-		<!-- Header Wrapper -->
-			<div id="header-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-						
-							<!-- Header -->
-								<section id="header">
-									
-									<!-- Logo -->
-									<h1><a href=".">Three.Fourteen</a></h1>
-									
-									<!-- Nav -->
-										<nav id="nav">
-											<ul>
-														<li class="current_page_item"><a href="/index.html">Home</a></li>
-														<li><a href="/blog.html">Blog</a></li>
-														<li><a href="./pages/about.html">About</a></li>
-														<li><a href="./pages/publications.html">Publications</a></li>
-											</ul>
-										</nav>
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-1">Nir Grinberg</h1>
+        <p class="text-base font-medium text-slate-600 dark:text-slate-300 mb-0.5">Assistant Professor</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+          Faculty of Computer and Information Science<br>
+          Ben-Gurion University of the Negev
+        </p>
 
-								</section>
+        <!-- Social icon links -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
 
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		<!-- Main Wrapper -->
-			<div id="main-wrapper" style="padding-top: 3em">
-				<div class="container">
-<div class="row">
-<div class="12u">
-    <section>
-        <div class="row">
-            <div class="12u">
+          <!-- Email (obfuscated) -->
+          <a href="#" id="email-link" data-u="nirgrn" data-d="bgu.ac.il"
+             title="Email"
+             class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg>
+          </a>
 
-                <!-- Banner -->
-                    <section id="banner">
-                        <a href="#">
-                            <span class="image image-full"><img src="images/banner1.jpg" alt=""></span>
-                            <header>
-                                <h2>Welcome to Three.Fourteen</h2>
-                                <span class="byline">Website &amp; blog by Nir Grinberg</span>
-                            </header>
-                        </a>
-                    </section>
+          <!-- Google Scholar (academicons) -->
+          <a href="https://scholar.google.com/citations?user=7PPJ0CMAAAAJ" target="_blank" rel="noopener"
+             title="Google Scholar"
+             class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="22" fill="currentColor" aria-hidden="true"><path d="M 343.75868,106.66243 V 79.430205 L 363.52365,63.999997 H 149.63354 L 20.476345,176.2736 h 85.656075 c -0.15534,2.12494 -0.21914,4.04644 -0.21914,6.22563 0,20.84472 7.2192,38.08662 21.67203,51.86089 14.45284,13.79702 32.25124,20.64784 53.32651,20.64784 4.92319,0 9.75059,-0.36794 14.43842,-1.02419 -2.90722,6.50082 -4.37457,12.52302 -4.37457,18.14228 0,9.87526 4.49924,20.4304 13.46715,31.6418 -39.23377,2.6705 -68.06112,9.73264 -86.43702,21.16322 -10.53108,6.49907 -19.000207,14.70396 -25.390349,24.5311 -6.390569,9.89933 -9.577754,20.51525 -9.577754,31.9616 0,9.64822 2.062375,18.33611 6.21907,26.06233 4.156694,7.7263 9.577757,14.07047 16.312223,18.98408 6.71825,4.96781 14.46899,9.10088 23.219,12.46874 8.73429,3.34378 17.40643,5.71858 26.06106,7.06258 8.62707,1.34222 17.20471,1.9985 25.70579,1.9985 13.46887,0 26.95353,-1.73428 40.54711,-5.18707 13.56165,-3.48461 26.28022,-8.64143 38.17105,-15.4927 11.85935,-6.80488 21.51545,-16.0865 28.9219,-27.7183 7.39024,-11.67998 11.09457,-24.80499 11.09457,-39.33613 0,-11.01584 -2.24964,-21.03852 -6.7502,-30.14073 -4.46864,-9.07202 -9.93785,-16.54102 -16.45271,-22.34403 -6.5008,-5.81263 -12.99987,-11.15539 -19.51512,-15.9679 -6.50083,-4.84488 -12.00021,-9.75058 -16.46884,-14.8129 -4.4848,-5.04657 -6.73444,-10.05419 -6.73444,-14.98395 0,-4.92145 1.73422,-9.67183 5.21588,-14.26559 3.45451,-4.6095 7.67376,-9.04795 12.60967,-13.30571 4.93756,-4.24944 9.87523,-8.96788 14.79665,-14.13302 4.92147,-5.14719 9.14072,-11.82739 12.60971,-20.00822 3.48467,-8.17907 5.20318,-17.44489 5.20318,-27.75679 0,-13.4527 -2.54714,-24.46065 -7.54735,-33.31348 -0.59369,-1.02243 -1.21757,-1.80338 -1.87511,-3.02225 l 56.90745,-46.672136 v 17.118526 c -7.39373,0.92969 -6.62422,5.34582 -6.62422,10.6352 v 128.66719 c 0,5.95832 4.8751,10.83382 10.83386,10.83382 h 3.98869 c 5.95835,0 10.83386,-4.87506 10.83386,-10.83382 V 117.29282 c 0,-5.27669 0.77741,-9.68801 -6.56167,-10.63039 z M 236.39865,329.14114 c 1.14099,0.7503 3.7039,2.78075 7.7184,6.03838 4.0495,3.24319 6.797,5.69582 8.26567,7.41432 1.43851,1.66381 3.5792,4.16501 6.37617,7.54734 2.81268,3.3744 4.7184,6.30394 5.71853,8.73425 1.00016,2.4767 2.01603,5.46089 3.04636,8.94556 0.98567,3.44488 1.48486,6.97595 1.48486,10.56169 0,17.04813 -6.56338,29.68007 -19.65604,37.85915 -13.125,8.18083 -28.76651,12.27368 -46.93767,12.27368 -9.18709,0 -18.2031,-1.09289 -27.06247,-3.1951 -8.84322,-2.11665 -17.31192,-5.3362 -25.39035,-9.60185 -8.07846,-4.25771 -14.57754,-10.20337 -19.50072,-17.79659 -4.93764,-7.64012 -7.40645,-16.41464 -7.40645,-26.24962 0,-10.32022 2.79692,-19.28987 8.42233,-26.90588 5.59343,-7.62564 12.93774,-13.3919 22.03208,-17.3154 9.0624,-3.94582 18.24946,-6.74232 27.56166,-8.39827 9.31221,-1.7023 18.79679,-2.555 28.43842,-2.555 4.46862,0 7.93582,0.25115 10.40465,0.69607 0.45456,0.21918 3.03188,2.07025 7.73456,5.56326 4.70401,3.46237 7.62565,5.59519 8.75047,6.38401 z m -3.35823,-100.5779 c -7.40648,8.85938 -17.73454,13.2882 -30.95363,13.2882 -11.85933,0 -22.29766,-4.76482 -31.26554,-14.31195 -8.99984,-9.52309 -15.42235,-20.32803 -19.34408,-32.43061 -3.93752,-12.10871 -5.90585,-23.98423 -5.90585,-35.648 0,-13.6942 3.59542,-25.35184 10.7809,-34.97598 7.18727,-9.64952 17.49915,-14.48477 30.93786,-14.48477 11.87507,0 22.37423,5.03825 31.43704,15.15677 9.09434,10.08482 15.60961,21.41303 19.5169,33.96799 3.92176,12.5392 5.87345,24.52979 5.87345,35.98399 0,13.44658 -3.70256,24.60984 -11.07663,33.45436 z"/></svg>
+          </a>
 
-            </div>
+          <!-- GitHub -->
+          <a href="https://github.com/nirg" target="_blank" rel="noopener"
+             title="GitHub"
+             class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+
+          <!-- Bluesky -->
+          <a href="https://bsky.app/profile/nirg.bsky.social" target="_blank" rel="noopener"
+             title="Bluesky"
+             class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 600 530" fill="currentColor" aria-hidden="true"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>
+          </a>
+
+          <!-- Twitter / X -->
+          <a href="https://x.com/grinbergnir" target="_blank" rel="noopener"
+             title="Twitter / X"
+             class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/nir-grinberg-01523b44" target="_blank" rel="noopener"
+             title="LinkedIn"
+             class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+
         </div>
-        <p></p>
-        <div>
-        <header class="major">
-            <h2>Blog Posts</h2>
-        </header>
-        <div class="row">
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./eng-modes-news.html" class="image"><img src="images/reading_modes_feat.png" alt=""/></a>
-                        <h3><a href="./eng-modes-news.html">Modes of Enagement with News and their Relationship to Information Gain in Text</a></h3>
-                        <span class="byline">April 18, 2018</span>
-                    </header>
-                    <p>How do people engage with news articles post-click? How does the development of ideas within the text of articles affect post-click engagement? To address these questions I analyzed a large, client-side log data of over 7.7 million page views of 66,821 news articles from seven popular news publishers …</p>
-                    <footer class="actions">
-                        <a href="./eng-modes-news.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./feedback-exp.html" class="image"><img src="images/feedback_exp_thumb.jpg" alt=""/></a>
-                        <h3><a href="./feedback-exp.html">When Do People Expect More Likes and Comments on Facebook and From Whom?</a></h3>
-                        <span class="byline">February 24, 2017</span>
-                    </header>
-                    <p>Despite the fact that social media has been around for over a decade now, we still know reletively little about people's expectations for getting attention and responses from their online friends. In <a href="/papers/feedback_exp.pdf">this work</a> we examine the often overlooked end of the attention ``transaction'': the content producer's expectation to be …</p>
-                    <footer class="actions">
-                        <a href="./feedback-exp.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./contribution-effect.html" class="image"><img src="images/reciprocity-2.png" alt=""/></a>
-                        <h3><a href="./contribution-effect.html">Changes in Engagement Before and After Posting to Facebook</a></h3>
-                        <span class="byline">January 10, 2016</span>
-                    </header>
-                    <p>Our recent work got accepted to CHI 2016! See the
-<a href="/pages/publications.html">publications</a> page for the full paper. </p>
-<p>I think this work is interesting for three main reasons: the questions we addressed, the methodology for answering them, and the answers we arrived at. </p>
-<p>The fundamental question we addressed in this work is …</p>
-                    <footer class="actions">
-                        <a href="./contribution-effect.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./wsdm-2014-summary-opinions-and-other-thoughts.html" class="image"><img src="images/WSDM2014-text-logo.png" alt=""/></a>
-                        <h3><a href="./wsdm-2014-summary-opinions-and-other-thoughts.html">WSDM 2014 Summary, Opinions and Other Thoughts</a></h3>
-                        <span class="byline">February 28, 2014</span>
-                    </header>
-                    <p>It was a great attending WSDM this year, right at the heart of NYC! I could not possibly cover all that went down there in the three days of the conference, but would use this post to highlight sessions and talks that I attended and found particularly interesting.</p>
-<p>The conference …</p>
-                    <footer class="actions">
-                        <a href="./wsdm-2014-summary-opinions-and-other-thoughts.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./sem-exp-api.html" class="image"><img src="images/zoom_into_pmi_topic1.png" alt=""/></a>
-                        <h3><a href="./sem-exp-api.html">Our Semantic Keyword Expansion API is ON!</a></h3>
-                        <span class="byline">May 19, 2013</span>
-                    </header>
-                    <p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly …</p>
-                    <footer class="actions">
-                        <a href="./sem-exp-api.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./using-tweepy.html" class="image"><img src="images/twython1.jpg" alt=""/></a>
-                        <h3><a href="./using-tweepy.html">Best Practices for Querying Twitter API using (forked) tweepy</a></h3>
-                        <span class="byline">April 28, 2013</span>
-                    </header>
-                    <p>Over the past few weeks I have been accessing Twitter API from python
-using tweepy. In the course of doing so, I added support in tweepy for
-using multiple authentication handlers, monitoring rate limits, waiting
-when running out of calls, support for search using Twitter API v1.1,
-proper pagination …</p>
-                    <footer class="actions">
-                        <a href="./using-tweepy.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-            <div class="4u">
-                <section class="box">
-                    <header>
-                        <a href="./extracting-diurnal-patterns.html" class="image"><img src="images/sandy-featured2.png" alt=""/></a>
-                        <h3><a href="./extracting-diurnal-patterns.html">Extracting Diurnal Patterns of Real World Activity from Social Media</a></h3>
-                        <span class="byline">March 30, 2013</span>
-                    </header>
-                    <p>Our most recent work got accepted to ICWSM 2013! See the
-<a href="/pages/publications.html">publications</a> page for the full paper.</p>
-<p>Here is the abstract:<br>
-In this study, we develop methods to identify verbal expressions in
-social media streams that refer to real-world activities. Using
-aggregate daily patterns of Foursquare checkins, our methods extract …</p>
-                    <footer class="actions">
-                        <a href="./extracting-diurnal-patterns.html" class="button button-icon button-icon-1">Continue Reading</a>
-                    </footer>
-                </section>
-            </div>
-        </div>
-    </section><!-- /#content -->
-</div>
-</div>
+      </div>
+    </div>
+  </header>
 
-				</div>
-			</div>
+  <!-- ─── Sticky nav (becomes fixed once header scrolls out of view) ─── -->
+  <nav id="site-nav" class="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-2xl mx-auto px-6 py-2.5 flex items-center gap-0.5">
 
-		<!-- Footer Wrapper -->
-			<div id="footer-wrapper">
-				<!-- Footer -->
-					<section id="footer" class="container">
-						<div class="row">
-							<div class="8u">
-								<section>
-									<header>
-										<h2>Latest posts</h2>
-									</header>
-									<ul class="dates">
-										<li>
-											<span class="date">Apr <strong>18</strong></span>
-											<h3><a href="eng-modes-news.html">Modes of Enagement with News and their Relationship to Information Gain in Text</a></h3>
-											<p><p>How do people engage with news articles post-click? How does the development of ideas within the text of articles affect post-click engagement? To address these questions I analyzed a large, client-side log data of over 7.7 million page views of 66,821 news articles from seven popular news publishers …</p></p>
-										</li>
-										<li>
-											<span class="date">Feb <strong>24</strong></span>
-											<h3><a href="feedback-exp.html">When Do People Expect More Likes and Comments on Facebook and From Whom?</a></h3>
-											<p><p>Despite the fact that social media has been around for over a decade now, we still know reletively little about people's expectations for getting attention and responses from their online friends. In <a href="/papers/feedback_exp.pdf">this work</a> we examine the often overlooked end of the attention ``transaction'': the content producer's expectation to be …</p></p>
-										</li>
-										<li>
-											<span class="date">Jan <strong>10</strong></span>
-											<h3><a href="contribution-effect.html">Changes in Engagement Before and After Posting to Facebook</a></h3>
-											<p><p>Our recent work got accepted to CHI 2016! See the
-<a href="/pages/publications.html">publications</a> page for the full paper. </p>
-<p>I think this work is interesting for three main reasons: the questions we addressed, the methodology for answering them, and the answers we arrived at. </p>
-<p>The fundamental question we addressed in this work is …</p></p>
-										</li>
-										<li>
-											<span class="date">Feb <strong>28</strong></span>
-											<h3><a href="wsdm-2014-summary-opinions-and-other-thoughts.html">WSDM 2014 Summary, Opinions and Other Thoughts</a></h3>
-											<p><p>It was a great attending WSDM this year, right at the heart of NYC! I could not possibly cover all that went down there in the three days of the conference, but would use this post to highlight sessions and talks that I attended and found particularly interesting.</p>
-<p>The conference …</p></p>
-										</li>
-										<li>
-											<span class="date">May <strong>19</strong></span>
-											<h3><a href="sem-exp-api.html">Our Semantic Keyword Expansion API is ON!</a></h3>
-											<p><p>If you ever wanted to track a certain topic on Twitter, you probably wondered what keywords people are using to refer to it. Our new Semantic Expansion API lets you do exactly that - given a short list of keywords, it finds keywords that appear in a similar context or directly …</p></p>
-										</li>
-										<li>
-											<span class="date">Apr <strong>28</strong></span>
-											<h3><a href="using-tweepy.html">Best Practices for Querying Twitter API using (forked) tweepy</a></h3>
-											<p><p>Over the past few weeks I have been accessing Twitter API from python
-using tweepy. In the course of doing so, I added support in tweepy for
-using multiple authentication handlers, monitoring rate limits, waiting
-when running out of calls, support for search using Twitter API v1.1,
-proper pagination …</p></p>
-										</li>
-										<li>
-											<span class="date">Mar <strong>30</strong></span>
-											<h3><a href="extracting-diurnal-patterns.html">Extracting Diurnal Patterns of Real World Activity from Social Media</a></h3>
-											<p><p>Our most recent work got accepted to ICWSM 2013! See the
-<a href="/pages/publications.html">publications</a> page for the full paper.</p>
-<p>Here is the abstract:<br>
-In this study, we develop methods to identify verbal expressions in
-social media streams that refer to real-world activities. Using
-aggregate daily patterns of Foursquare checkins, our methods extract …</p></p>
-										</li>
-									</ul>
-								</section>
-							</div>
-								<div class="4u">
-									<section style="border-top: solid 1px #ddd; border-top-color: rgba(255,255,255,0.05); padding: 1.3em 0 0 0;">
-									<header>
-										<h2>Contact</h2>
-									</header>
-									<ul class="social">
-											<li class="facebook"><a href="https://www.facebook.com/nirgr" class="icon48 icon48-1">Facebook</a></li>
-											<li class="twitter"><a href="http://twitter.com/grinbergnir" class="icon48 icon48-2">Twitter</a></li>
-										<li class="linkedin"><a href="http://www.linkedin.com/pub/nir-grinberg/44/23b/15" class="icon48 icon48-4">LinkedIn</a></li>
-											<li class="googleplus"><a href="https://plus.google.com/110010581376861389601" class="icon48 icon48-6">Google+</a></li>
-									</ul>
-											<h3>Email</h3>
-											<a href="mailto:last.first name -AT- gmail.com">last.first name -AT- gmail.com</a>
-											<h3>Address</h3><p>177 Auntington Ave., 10th floor, Boston, MA 02115</p>
-								</section>
-								<section style="border-top: solid 1px #ddd; border-top-color: rgba(255,255,255,0.05); padding: 1.3em 0 1.3em 0;">
-									<header>
-										<h2>Blogroll</h2>
-									</header>
-									<ul>
-										<li><a href="http://lazerlab.net/">Lazer Lab</a></li>
-										<li><a href="http://www.cs.cornell.edu/">CS @ Cornell</a></li>
-										<li><a href="https://s.tech.cornell.edu/">Social Technologies Lab @ Cornell Tech</a></li>
-										<li><a href="https://research.facebook.com/datascience">Facebook Core Data Science</a></li>
-										<li><a href="http://www.iq.harvard.edu/">Harvard IQSS</a></li>
-										<li><a href="http://www.networkscienceinstitute.org/">Network Science Institute</a></li>
-									</ul>
-								</section>
-								</div>
-						</div>
-						<!--<div class="row">
-							<div class="4u">
-								
-							</div>
-							<div class="4u">
-								<section>
-									<header>
-										<h2>Categories</h2>
-									</header>
-									<ul class="divided">
-											<li><a href="./category/uncategorized.html">Uncategorized</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="4u">
-							
-								
-							</div>
-						</div>-->
-						<div class="row">
-							<div class="12u">
-								<!-- Copyright -->
-									<div id="copyright">
-										<ul class="links">
-											<li>&copy; Nir Grinberg 2018	</li>
-											<!--<li>Images: <a href="http://facebook.com/DreametryDoodle">Dreametry Doodle</a> + <a href="http://iconify.it">Iconify.it</a></li>-->
-											<li>Theme adapted from: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-							</div>
-						</div>
-					</section>
-			</div>
-		<script src="/theme/js/jquery.min.js"></script>
-		<script src="/theme/js/jquery.dropotron.js"></script>
-		<script src="/theme/js/config.js"></script>
-		<script src="/theme/js/skel.min.js"></script>
-		<script src="/theme/js/skel-panels.min.js"></script>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="/theme/css/ie8.css" /><![endif]-->
-	</body>
+      <a href="#bio"          class="nav-link px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors">About</a>
+      <a href="#publications" class="nav-link px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors">Publications</a>
+      <a href="#students"     class="nav-link px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors">Prospective students</a>
+
+      <a href="https://sel.sise.bgu.ac.il/" target="_blank" rel="noopener"
+         class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors flex items-center gap-1">
+        Lab
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+
+      <!-- Dark mode toggle -->
+      <button id="dark-toggle"
+              aria-label="Toggle dark mode"
+              class="ml-auto p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors">
+        <!-- Moon icon: shown in light mode -->
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+        <!-- Sun icon: shown in dark mode -->
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ─── Main content ─── -->
+  <main class="max-w-2xl mx-auto px-6 py-12">
+
+    <!-- About -->
+    <section id="bio">
+      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-5">About</h2>
+      <div class="space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p>
+          I am an Assistant Professor in the
+          <a href="https://www.bgu.ac.il/en/u/faculties/computer-and-information-science/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Faculty of Computer and Information Science</a>
+          at Ben-Gurion University of the Negev, where I direct the
+          <a href="https://sel.sise.bgu.ac.il/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Socially Embedded Lab</a>.
+          Before joining BGU, I was a postdoc at the 
+          <a href="https://www.lazerlab.net/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Lazer Lab</a> at the 
+          <a href="https://www.networkscienceinstitute.org/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Network Science Institute</a>
+          (Northeastern University) and a Research Fellow at the
+          <a href="https://www.iq.harvard.edu/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Institute for Quantitative Social Science</a>
+          (Harvard University).
+          I received my PhD from Cornell University under the supervision of
+          <a href="https://mornaaman.com/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Mor Naaman</a>.
+        </p>
+        <p>
+          My research investigates social behavior in large-scale, online information systems. I study areas where systems are suboptimal for people -- e.g., not meeting their needs, goals, or expectations -- and propose new computational measures to bridge the gaps. I am particularly excited about methods (machine learning, natural language processing, online panels) that extend our ability to see the online world, advance our understanding of algorithms in these spaces, and align systems with the needs of individuals and society.
+        </p>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-semibold text-slate-700 dark:text-slate-300">Awards:</span>
+          BGU Teaching Innovation (2022) &middot; BGU Teaching Excellence (2025) &middot; BGU Research Excellence (2025)
+        </p>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="border-t border-slate-200 dark:border-slate-800 pt-10 mt-14">
+      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">Select publications</h2>
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+        Below are select publications. See my
+        <a href="https://sel.sise.bgu.ac.il/#publications" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">lab's website</a>
+        and
+        <a href="https://scholar.google.com/citations?user=7PPJ0CMAAAAJ" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Google Scholar</a>
+        for the complete list of publications.
+      </p>
+
+      <ol class="space-y-7">
+
+        <!-- Journal icon SVG (reused inline) -->
+        <!-- Conference icon SVG (reused inline) -->
+
+        <li class="flex gap-3.5 items-start" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <span title="Science" class="flex-shrink-0 mt-1.5">
+            <img src="logos/science-logo3.svg" alt="Science" class="dark:invert w-auto h-4">
+          </span>
+          <div>
+            <a href="https://doi.org/10.1126/science.adl4435" itemprop="url" target="_blank" rel="noopener"
+               class="font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors leading-snug block mb-1">
+              <span itemprop="name">Supersharers of fake news on Twitter</span>
+            </a>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              <span itemprop="author">Sahar Baribi-Bartov, Briony Swire-Thompson, and Nir Grinberg</span>
+              &middot; <em><span itemprop="publisher">Science</span></em>, <span itemprop="datePublished">2024</span>
+            </p>
+            <a href="https://sel.sise.bgu.ac.il/assets/pubs/supersharers-science-2024.pdf" target="_blank" rel="noopener" 
+               class="text-sm text-slate-600 dark:text-slate-400" style="border-bottom: 1px dotted; padding-bottom: 0px; text-decoration: none;">
+              <font color="649AEE">pdf</font>
+            </a>
+          </div>
+        </li>
+
+        <li class="flex gap-3.5 items-start" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <span title="Science" class="flex-shrink-0 mt-1.5">
+            <img src="logos/science-logo3.svg" alt="Science" class="dark:invert w-auto h-4">
+          </span>
+          <div>
+            <a href="https://doi.org/10.1126/science.aau2706" itemprop="url" target="_blank" rel="noopener"
+               class="font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors leading-snug block mb-1">
+              <span itemprop="name">Fake news on Twitter during the 2016 U.S. presidential election</span>
+            </a>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              <span itemprop="author">Nir Grinberg, Kenneth Joseph, Lisa Friedland, Briony Swire-Thompson, and David Lazer</span>
+              &middot; <em><span itemprop="publisher">Science</span></em>, <span itemprop="datePublished">2019</span>
+            </p>
+            <a href="https://sel.sise.bgu.ac.il/assets/pubs/fake-news-science-2019.pdf" target="_blank" rel="noopener" 
+               class="text-sm text-slate-600 dark:text-slate-400" style="border-bottom: 1px dotted; padding-bottom: 0px; text-decoration: none;">
+              <font color="649AEE">pdf</font>
+            </a>
+          </div>
+        </li>
+
+        <li class="flex gap-3.5 items-start" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <span title="PNAS Nexus" class="flex-shrink-0 mt-1.5 dark:bg-white dark:rounded dark:p-px">
+            <img src="logos/pnas_nexus.jpg" alt="PNAS Nexus" class="w-10 h-10 object-contain">
+          </span>
+          <div>
+            <a href="https://doi.org/10.1093/pnasnexus/pgaf309" itemprop="url" target="_blank" rel="noopener"
+               class="font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors leading-snug block mb-1">
+              <span itemprop="name">Can social media reliably estimate unemployment?</span>
+            </a>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              <span itemprop="author">Do Lee, Manuel Tonneau, Boris Sobol, Nir Grinberg, and Samuel P. Fraiberger</span>
+              &middot; <em><span itemprop="publisher">PNAS Nexus</span></em>, <span itemprop="datePublished">2025</span>
+            </p>
+            <a href="https://sel.sise.bgu.ac.il/assets/pubs/lee-unemployment-pnas-nexus-2025.pdf" target="_blank" rel="noopener" 
+               class="text-sm text-slate-600 dark:text-slate-400" style="border-bottom: 1px dotted; padding-bottom: 0px; text-decoration: none;">
+              <font color="649AEE">pdf</font>
+            </a>
+          </div>
+        </li>
+
+        <li class="flex gap-3.5 items-start" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <span title="KDD" class="flex-shrink-0 mt-1.5 dark:bg-white dark:rounded dark:p-px">
+            <img src="logos/kdd-logo.png" alt="KDD" class="w-10 h-10 object-contain">
+          </span>
+          <div>
+            <a href="https://doi.org/10.1145/3637528.3671539" itemprop="url" target="_blank" rel="noopener"
+               class="font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors leading-snug block mb-1">
+              <span itemprop="name">Leveraging Exposure Networks for Detecting Fake News Sources</span>
+            </a>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              <span itemprop="author">Maor Reuben, Lisa Friedland, Rami Puzis, and Nir Grinberg</span>
+              &middot; <em><span itemprop="publisher">KDD</span></em>, <span itemprop="datePublished">2024</span>
+            </p>
+            <a href="https://sel.sise.bgu.ac.il/assets/pubs/fn-source-detect-kdd-2024.pdf" target="_blank" rel="noopener" 
+               class="text-sm text-slate-600 dark:text-slate-400" style="border-bottom: 1px dotted; padding-bottom: 0px; text-decoration: none;">
+              <font color="649AEE">pdf</font>
+            </a>
+          </div>
+        </li>
+
+        <li class="flex gap-3.5 items-start" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <span title="ACL" class="flex-shrink-0 mt-1.5">
+            <img src="logos/acl.svg" alt="ACL" class="w-10 h-10 object-contain dark:invert">
+          </span>
+          <div>
+            <a href="https://doi.org/10.18653/v1/2022.acl-long.453" itemprop="url" target="_blank" rel="noopener"
+               class="font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors leading-snug block mb-1">
+              <span itemprop="name">Multilingual Detection of Personal Employment Status on Twitter</span>
+            </a>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              <span itemprop="author">Manuel Tonneau, Dhaval Adjodah, João Palotti, Nir Grinberg, and Samuel P. Fraiberger</span>
+              &middot; <em><span itemprop="publisher">ACL</span></em>, <span itemprop="datePublished">2022</span>
+            </p>
+            <a href="https://sel.sise.bgu.ac.il/assets/pubs/detect-unemp-acl2022.pdf" target="_blank" rel="noopener" 
+               class="text-sm text-slate-600 dark:text-slate-400" style="border-bottom: 1px dotted; padding-bottom: 0px; text-decoration: none;">
+              <font color="649AEE">pdf</font>
+            </a>
+          </div>
+        </li>
+
+        <li class="flex gap-3.5 items-start" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <span title="SIGCHI" class="flex-shrink-0 mt-1.5 dark:bg-white dark:rounded dark:p-px">
+            <img src="logos/sigchi-symbol.jpg" alt="SIGCHI" class="w-10 h-10 object-contain">
+          </span>
+          <div>
+            <a href="https://dl.acm.org/doi/10.1145/2858036.2858501" itemprop="url" target="_blank" rel="noopener"
+               class="font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors leading-snug block mb-1">
+              <span itemprop="name">Changes in Engagement Before and After Posting to Facebook</span>
+            </a>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              <span itemprop="author">Nir Grinberg, P. Alex Dow, Lada A. Adamic, and Mor Naaman</span>
+              &middot; <em><span itemprop="publisher">CHI</span></em>, <span itemprop="datePublished">2016</span>
+            </p>
+            <a href="https://sel.sise.bgu.ac.il/assets/pubs/contribution2016grinberg.pdf" target="_blank" rel="noopener" 
+               class="text-sm text-slate-600 dark:text-slate-400" style="border-bottom: 1px dotted; padding-bottom: 0px; text-decoration: none;">
+              <font color="649AEE">pdf</font>
+            </a>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- Prospective Students -->
+    <section id="students" class="border-t border-slate-200 dark:border-slate-800 pt-10 mt-14">
+      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-5">Prospective students</h2>
+      <div class="space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p>
+          I am always looking for motivated MSc and PhD students to join the
+          <a href="https://sel.sise.bgu.ac.il/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Socially Embedded Lab</a>
+          at Ben-Gurion University. I am particularly interested in students with a strong quantitative background and a passion for computational social science, natural language processing, or large-scale social media analysis.
+        </p>
+        <p>
+          If you are interested in joining the lab, please send me an email with your recent CV, transcripts, a brief description of your research interests, and why you think we are a good fit. To stand out, please read 2-3 of my recent papers (see my
+          <a href="https://sel.sise.bgu.ac.il/" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">lab website</a> or
+          <a href="https://scholar.google.com/citations?user=7PPJ0CMAAAAJ" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300">Google Scholar profile</a>)
+          and describe what methodological aspects of our work excite you. 
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 mt-16 py-10">
+    <div class="max-w-2xl mx-auto px-6 flex items-center justify-between text-sm text-slate-500 dark:text-slate-500">
+      <div class="flex flex-col gap-0.5">
+        <span class="font-medium text-slate-700 dark:text-slate-300">© Nir Grinberg</span>
+        <a href="#" id="footer-email" data-u="nirgrn" data-d="bgu.ac.il"
+           class="hover:text-slate-700 dark:hover:text-slate-300 transition-colors">
+          nirgrn&nbsp;[at]&nbsp;bgu.ac.il
+        </a>
+      </div>
+      <a href="https://bsky.app/profile/nirg.bsky.social" target="_blank" rel="noopener"
+         title="Bluesky"
+         class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 600 530" fill="currentColor" aria-hidden="true"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Email obfuscation ──────────────────────────────────────────
+    (function () {
+      ['email-link', 'footer-email'].forEach(function (id) {
+        const el = document.getElementById(id);
+        if (el) el.href = 'mailto:' + el.dataset.u + '@' + el.dataset.d;
+      });
+    })();
+
+    // ── Dark mode toggle ───────────────────────────────────────────
+    (function () {
+      const btn = document.getElementById('dark-toggle');
+      btn.addEventListener('click', function () {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    })();
+
+    // ── Active nav link via IntersectionObserver ───────────────────
+    (function () {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('a.nav-link');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => {
+                link.classList.toggle(
+                  'active',
+                  link.getAttribute('href') === '#' + entry.target.id
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: '-15% 0px -75% 0px' }
+      );
+
+      sections.forEach((s) => observer.observe(s));
+    })();
+  </script>
+
+</body>
 </html>
